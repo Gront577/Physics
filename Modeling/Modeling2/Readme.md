@@ -184,3 +184,6 @@ class ElectronInCapacitor
     }
 }
 ```
+## Результаты работы кода:
+![{B4E07C88-0597-47E2-8708-0FD5D6206E0E}](https://github.com/user-attachments/assets/368278b9-0833-4818-bc11-ed0f6370c101)
+
