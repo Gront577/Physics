@@ -93,7 +93,7 @@ using OxyPlot.Axes;
 
 class ElectronInCapacitor
 {
-    const double e = 1.6e-19; // заряд электрона, Кл
+    const double e = 1.6e-19; // заряд частицы, Кл (положительный)
     const double m = 9.11e-31; // масса электрона, кг
 
     static void Main()
