@@ -86,26 +86,19 @@
 
 ```csharp
 using System;
-using System.IO;
+using System.Collections.Generic;
+using System.Linq;
 using OxyPlot;
 using OxyPlot.Series;
 using OxyPlot.Axes;
 
 class ElectronInCapacitor
 {
-    const double e = 1.6e-19; // заряд частицы, Кл (положительный)
+    const double e = -1.6e-19; // заряд электрона, Кл
     const double m = 9.11e-31; // масса электрона, кг
 
     static void Main()
     {
-        // Создаём папку "graphs", если она не существует
-        string directoryPath = "graphs";
-        if (!Directory.Exists(directoryPath))
-        {
-            Directory.CreateDirectory(directoryPath);
-            Console.WriteLine("Папка 'graphs' создана.");
-        }
-
         // Исходные данные
         double r = 0.03; // внутренний радиус, м
         double R = 0.07; // внешний радиус, м
@@ -114,7 +107,6 @@ class ElectronInCapacitor
 
         // Расчёт минимальной разности потенциалов
         double d = R - r; // расстояние между обкладками, м
-        double E = e / (4 * Math.PI * 8.85e-12 * d); // поле внутри конденсатора
         double U_min = m * V0 * V0 * d / (2 * e * L); // минимальная разность потенциалов, В
 
         Console.WriteLine($"Минимальная разность потенциалов: {U_min:F2} В");
@@ -131,14 +123,21 @@ class ElectronInCapacitor
 
         double y = 0;
         double vy = 0;
-        double ay = e * U_min / (m * d); // ускорение, м/с^2
+        double ay;
 
         for (double t = 0; t <= t_max; t += dt)
         {
-            y += vy * dt;
-            vy += ay * dt;
+            double x = V0 * t;
 
-            xList.Add(V0 * t);
+            // Ускорение уменьшается по мере увеличения y, учитывая поле
+            ay = (e * U_min / d) * ((R - y) / d) / m;
+
+            // Интеграция скорости и положения
+            vy += ay * dt;
+            y += vy * dt;
+
+            // Сохранение данных для графиков
+            xList.Add(x);
             yList.Add(y);
             vyList.Add(vy);
             ayList.Add(ay);
@@ -149,17 +148,21 @@ class ElectronInCapacitor
                 break;
         }
 
-        Console.WriteLine($"Время полёта: {tList.Last():F9} с");
-        Console.WriteLine($"Конечная скорость Vy: {vyList.Last():F2} м/с");
+        // Проверка конечных значений
+        double finalVy = vyList.Last();
+        double finalT = tList.Last();
+
+        Console.WriteLine($"Время полёта: {finalT:F9} с");
+        Console.WriteLine($"Конечная скорость Vy: {finalVy:F2} м/с");
 
         // Построение графиков
-        PlotGraph(xList, yList, "График y(x)", "x (м)", "y (м)", directoryPath);
-        PlotGraph(tList, vyList, "График Vy(t)", "t (с)", "Vy (м/с)", directoryPath);
-        PlotGraph(tList, ayList, "График ay(t)", "t (с)", "ay (м/с^2)", directoryPath);
-        PlotGraph(tList, yList, "График y(t)", "t (с)", "y (м)", directoryPath);
+        PlotGraph(xList, yList, "График y(x)", "x (м)", "y (м)");
+        PlotGraph(tList, vyList, "График Vy(t)", "t (с)", "Vy (м/с)");
+        PlotGraph(tList, ayList, "График ay(t)", "t (с)", "ay (м/с^2)");
+        PlotGraph(tList, yList, "График y(t)", "t (с)", "y (м)");
     }
 
-    static void PlotGraph(List<double> x, List<double> y, string title, string xLabel, string yLabel, string directoryPath)
+    static void PlotGraph(List<double> x, List<double> y, string title, string xLabel, string yLabel)
     {
         var plotModel = new PlotModel { Title = title };
         plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = xLabel });
@@ -173,17 +176,16 @@ class ElectronInCapacitor
         plotModel.Series.Add(series);
 
         var exporter = new SvgExporter { Width = 600, Height = 400 };
-        string filePath = Path.Combine(directoryPath, $"{title.Replace(' ', '_')}.svg");
-
-        using (var stream = File.Create(filePath))
+        using (var stream = File.Create($"{title.Replace(' ', '_')}.svg"))
         {
             exporter.Export(plotModel, stream);
         }
 
-        Console.WriteLine($"График '{title}' сохранён в файл: {filePath}");
+        Console.WriteLine($"График '{title}' сохранён в файл.");
     }
 }
+
 ```
 ## Результаты работы кода:
-![{B4E07C88-0597-47E2-8708-0FD5D6206E0E}](https://github.com/user-attachments/assets/368278b9-0833-4818-bc11-ed0f6370c101)
+![{C12A226C-A1DA-483E-B49C-536D5C13B553}](https://github.com/user-attachments/assets/dac34b23-960e-4102-ac74-b4058c509251)
 
