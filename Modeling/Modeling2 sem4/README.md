@@ -145,7 +145,7 @@ if __name__ == "__main__":
 
 ## Результаты
 - Расстояние между максимумами: 
-  $$ \Delta x = \frac{\lambda D}{d} = \frac{500 \times 10^{-9} \cdot 1.0}{50 \times 10^{-6}} = 10\ \text{мм} $$
+  $$ Δx=λDd =10 мм $$
   
 - Первый нуль дифракционной оболочки: 
-  $$ x_{\text{null}} = \frac{\lambda D}{a} = \frac{500 \times 10^{-9} \cdot 1.0}{10 \times 10^{-6}} = 50\ \text{мм} $$
+  $$ xnull=λDa=50 мм $$
