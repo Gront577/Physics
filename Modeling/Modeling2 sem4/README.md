@@ -116,54 +116,12 @@ if __name__ == "__main__":
     main()
 
 ```
-
-Код написан на Python с использованием библиотек numpy, opencv-python и matplotlib. Основная функция compute_I вычисляет интенсивность по формуле:
-
-[ I(x) = \left( \frac{\sin \beta}{\beta} \right)^2 \cdot \left( \frac{\sin (N \alpha)}{\sin \alpha} \right)^2, ]
-
-где ( \beta = \frac{\pi a x}{\lambda D} ), ( \alpha = \frac{\pi d x}{\lambda D} ).
-
-Полный код доступен в файле interference.py.
-
-Параметры моделирования
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>I</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mrow><mo fence="true">(</mo><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mi>β</mi></mrow><mi>β</mi></mfrac><mo fence="true">)</mo></mrow><mn>2</mn></msup><mo>⋅</mo><msup><mrow><mo fence="true">(</mo><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>N</mi><mi>α</mi><mo stretchy="false">)</mo></mrow><mrow><mi>sin</mi><mo>⁡</mo><mi>α</mi></mrow></mfrac><mo fence="true">)</mo></mrow><mn>2</mn></msup><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">I(x) = \left( \frac{\sin \beta}{\beta} \right)^2 \cdot \left( \frac{\sin (N \alpha)}{\sin \alpha} \right)^2,</annotation></semantics></math>
+где:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>β</mi><mo>=</mo><mfrac><mrow><mi>π</mi><mi>a</mi><mi>x</mi></mrow><mrow><mi>λ</mi><mi>D</mi></mrow></mfrac><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\beta = \frac{\pi a x}{\lambda D},</annotation></semantics></math>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>α</mi><mo>=</mo><mfrac><mrow><mi>π</mi><mi>d</mi><mi>x</mi></mrow><mrow><mi>λ</mi><mi>D</mi></mrow></mfrac><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\alpha = \frac{\pi d x}{\lambda D}.</annotation></semantics></math>
 
 
-
-
-
-( N = 2 ) — количество щелей.
-
-
-
-( a = 10 , \mu\text{m} ) — ширина щели.
-
-
-
-( d = 50 , \mu\text{m} ) — период.
-
-
-
-( \lambda = 500 , \text{nm} ) — длина волны (монохроматический свет).
-
-
-
-( \Delta \lambda = 10 , \text{nm} ) — ширина спектра (для квазимонохроматического света).
-
-
-
-( D = 1.0 , \text{m} ) — расстояние до экрана.
-
-
-
-( x \in [-0.05, 0.05] , \text{m} ) — диапазон координат.
-
-
-
-light_type = 0 — по умолчанию используется монохроматический свет (для квазимонохроматического света установите light_type = 1).
-
-Код автоматически устанавливает зависимости (numpy, opencv-python, matplotlib), если они отсутствуют.
-
-Результаты
 
 График зависимости ( I(x) )
 
