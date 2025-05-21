@@ -120,7 +120,6 @@ $$ I(x) = \left( \frac{\sin \beta}{\beta} \right)^2 \cdot \left( \frac{\sin (N \
 
 где:
 $$ \beta = \frac{\pi a x}{\lambda D}, $$
-$$ \alpha = \frac{\pi d x}{\lambda D}. $$
 
 
 График зависимости ( I(x) )
