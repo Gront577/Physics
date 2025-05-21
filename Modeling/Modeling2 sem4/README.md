@@ -116,11 +116,11 @@ if __name__ == "__main__":
     main()
 
 ```
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>I</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mrow><mo fence="true">(</mo><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mi>β</mi></mrow><mi>β</mi></mfrac><mo fence="true">)</mo></mrow><mn>2</mn></msup><mo>⋅</mo><msup><mrow><mo fence="true">(</mo><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>N</mi><mi>α</mi><mo stretchy="false">)</mo></mrow><mrow><mi>sin</mi><mo>⁡</mo><mi>α</mi></mrow></mfrac><mo fence="true">)</mo></mrow><mn>2</mn></msup><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">I(x) = \left( \frac{\sin \beta}{\beta} \right)^2 \cdot \left( \frac{\sin (N \alpha)}{\sin \alpha} \right)^2,</annotation></semantics></math>
-где:
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>β</mi><mo>=</mo><mfrac><mrow><mi>π</mi><mi>a</mi><mi>x</mi></mrow><mrow><mi>λ</mi><mi>D</mi></mrow></mfrac><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\beta = \frac{\pi a x}{\lambda D},</annotation></semantics></math>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>α</mi><mo>=</mo><mfrac><mrow><mi>π</mi><mi>d</mi><mi>x</mi></mrow><mrow><mi>λ</mi><mi>D</mi></mrow></mfrac><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\alpha = \frac{\pi d x}{\lambda D}.</annotation></semantics></math>
+$$ I(x) = \left( \frac{\sin \beta}{\beta} \right)^2 \cdot \left( \frac{\sin (N \alpha)}{\sin \alpha} \right)^2, $$
 
+где:
+$$ \beta = \frac{\pi a x}{\lambda D}, $$
+$$ \alpha = \frac{\pi d x}{\lambda D}. $$
 
 
 График зависимости ( I(x) )
