@@ -149,3 +149,5 @@ $$ I(x) = \left( \frac{\sin \beta}{\beta} \right)^2 \cdot \left( \frac{\sin (N \
 
 
 Минимумы — синие.
+
+$$ E = mc^2 $$
