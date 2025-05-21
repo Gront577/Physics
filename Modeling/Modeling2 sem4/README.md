@@ -13,7 +13,8 @@
 
 ### Формула интенсивности
 Интенсивность в точке экрана:
-$$ I(x) = \left( \frac{\sin \beta}{\beta} \right)^2 \cdot \left( \frac{\sin (N \alpha)}{\sin \alpha} \right)^2 $$
+$$ I(x) = \left( \frac{\sin \beta}{\beta} \right)^2 \cdot \left( \frac{\sin (N \alpha)}{\sin \alpha} \right)^2, $$
+
 
 где:
 - $\beta = \frac{\pi a x}{\lambda D}$ — параметр дифракции на щели
