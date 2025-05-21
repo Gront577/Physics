@@ -118,7 +118,7 @@ if __name__ == "__main__":
 ```
 $$ I(x) = \left( \frac{\sin \beta}{\beta} \right)^2 \cdot \left( \frac{\sin (N \alpha)}{\sin \alpha} \right)^2, $$
 
-где: [ \beta = \frac{\pi a x}{\lambda D}, ] [ \alpha = \frac{\pi d x}{\lambda D}. ]
+где: $$ \beta = \frac{\pi a x}{\lambda D}, $$ $$ \alpha = \frac{\pi d x}{\lambda D}. $$
 
 График зависимости ( I(x) )
 
@@ -128,11 +128,11 @@ $$ I(x) = \left( \frac{\sin \beta}{\beta} \right)^2 \cdot \left( \frac{\sin (N \
 
 
 
-Расстояние между интерференционными максимумами: [ \Delta x = \frac{\lambda D}{d} = \frac{500 \times 10^{-9} \cdot 1.0}{50 \times 10^{-6}} = 10 , \text{mm}. ]
+Расстояние между интерференционными максимумами: $$ \Delta x = \frac{\lambda D}{d} = \frac{500 \times 10^{-9} \cdot 1.0}{50 \times 10^{-6}} = 10 , \text{mm}. $$
 
 
 
-Первый нуль дифракционной огибающей: [ x = \frac{\lambda D}{a} = \frac{500 \times 10^{-9} \cdot 1.0}{10 \times 10^{-6}} = 50 , \text{mm}. ]
+Первый нуль дифракционной огибающей: $$ x = \frac{\lambda D}{a} = \frac{500 \times 10^{-9} \cdot 1.0}{10 \times 10^{-6}} = 50 , \text{mm}. $$
 
 График подтверждает расчеты: расстояние между пиками ~10 мм, интенсивность падает к краям (( x = \pm 50 , \text{mm} )), симметрия относительно ( x = 0 ).
 
@@ -149,5 +149,3 @@ $$ I(x) = \left( \frac{\sin \beta}{\beta} \right)^2 \cdot \left( \frac{\sin (N \
 
 
 Минимумы — синие.
-
-$$ E = mc^2 $$
