@@ -149,3 +149,7 @@ $$ I(x) = \left( \frac{\sin \beta}{\beta} \right)^2 \cdot \left( \frac{\sin (N \
 
 
 Минимумы — синие.
+
+
+![График зависимости \( I(x) \)](intensity_plot.png)
+![Цветное распределение интенсивности](intensity_distribution.png)
