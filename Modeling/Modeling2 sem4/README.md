@@ -27,7 +27,8 @@
 График зависимости интенсивности ( I(x) ) от координаты ( x ).
 
 Код
-'''
+
+```
 import subprocess
 import sys
 import numpy as np
@@ -57,13 +58,12 @@ def main():
     x_max = 0.05       # Максимальная координата x в м
     num_points = 1000  # Количество точек
     M = 100            # Количество длин волн для усреднения
-
+    
     # Конвертация единиц
     a_m = a * 1e-6           
     d_m = d * 1e-6           
     lambda_m = lambda_ * 1e-9
     delta_lambda_m = delta_lambda * 1e-9 
-
     # Вычисление I(x)
     x_values = np.linspace(x_min, x_max, num_points)
     I_values = np.zeros(num_points)
@@ -114,7 +114,8 @@ def main():
 
 if __name__ == "__main__":
     main()
-  '''
+
+```
 
 Код написан на Python с использованием библиотек numpy, opencv-python и matplotlib. Основная функция compute_I вычисляет интенсивность по формуле:
 
